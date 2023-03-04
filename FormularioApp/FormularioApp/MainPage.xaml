@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormularioApp.MainPage">
+
+    <StackLayout Background="#f6f6f6"
+                 Margin="8">
+        <Label x:Name= "lbl_principal"
+               Text="esta es la clase de programacion IV, BIENVENIDOS"
+               FontSize="Medium"/>
+        <ProgressBar x:Name="progress"
+                       Progress =".0"/>
+        <Grid>
+            <Label x:Name="lbl_progress"
+                   Text="50%"
+                   FontSize="Large"
+                   TextColor="#6c7a86"/>
+            <Switch x:Name="SW_example"
+                    IsToggled="False"
+                    Toggled="sw_example_Toggled"/>
+
+        </Grid>
+        <Frame Margin="8"
+               BackgroundColor="white">
+            <StackLayout>
+                <Entry x:Name="Lbl_nombre"
+                       Placeholder="Igrese Su Nombre"
+                       FontSize="Medium"
+                       Completed="lbl_nombre_compled"
+                       TextChanged="lbl_nombre_TextChanged"/>
+                <Entry x:Name="Lbl_correo"
+                       Placeholder="Igrese Su correo"
+                       FontSize="Medium"
+                       Completed="lbl_correo_compled"/>
+                <Entry x:Name="Lbl_password"
+                       Placeholder="Igrese Su contraseña"
+                       FontSize="Medium"
+                       Completed="lbl_password_compled"/>
+                <Entry x:Name="Lbl_password2"
+                       Placeholder="Repita su contraseña"
+                       FontSize="Medium"
+                       IsPassword="True"
+                       Completed="lbl_password2_compled"/>
+                <Grid ColumnDefinitions="auto,*">
+                    <CheckBox x:Name="cbox_terminos"
+                              IsChecked="False"
+                              CheckedChanged="cbox_terminos_checkedChanged"
+                              Grid.Column="0"/>
+                    <Label Text="ACEPTO LA CLASE DE PROGRAMACION IV"
+                           Grid.Column="1"
+                           VerticalOptions="Center"/>
+                </Grid>
+            </StackLayout>
+        </Frame>
+        <Button x:Name=" =btn_registrar"
+                    Text="Registrar"
+                    FontSize="Large"
+                    Clicked="btn_registar_clicked"
+                    CornerRadius="10"
+                    IsEnabled="False"
+                    TextColor="#FF4081"
+                    BorderColor="#FF4081"
+                    FontAttributes="Bold"
+                    Padding="8"
+                    Margin="32"
+                    BackgroundColor="#f6f6f6"
+                    BorderWidth="2"/>
+
+    </StackLayout>
+
+</ContentPage>
